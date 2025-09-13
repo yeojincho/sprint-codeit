@@ -11,9 +11,10 @@
 
 ## 🚀 기술 스택
 
-- **Framework**: [Next.js](https://nextjs.org)
+- **Framework**: Next.js
 - **Language**: TypeScript
 - **Style**: Tailwind
+- **Deployment**: Vercel
 - **Etc.**
   - 컬러 시스템 설정
   - 공용 컴포넌트 구현
