@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import {Button} from "@/components/common/Button";
 import {TodoItem} from "@/components/todos/TodoItem";
 
 export const Playground = () => {
   return (
-   <div>
+    <div>
       <h1 className="mb-4">화면 공통 컴포넌트</h1>
       <div className="grid grid-cols-2 gap-4">
         <Button type="add" iconClassName="">
@@ -22,12 +22,12 @@ export const Playground = () => {
         <Button type="delete" state="active" iconClassName="">
           삭제하기
         </Button>
-        <Button type="add" state="" iconClassName=""></Button>
+        <Button type="add" iconClassName=""></Button>
         <Button type="add" state="active"></Button>
-        <TodoItem name="비타민 챙겨 먹기"/>
+        <TodoItem id={0} name="비타민 챙겨 먹기" isCompleted={false} onToggle={() => {}} />
       </div>
     </div>
   );
-}
+};
 
 export default Playground;
