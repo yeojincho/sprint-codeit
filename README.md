@@ -2,7 +2,10 @@
 
 할 일 목록을 간단하고 직관적으로 관리할 수 있는 **To Do 서비스**입니다.  
 **Next.js**와 **TypeScript**를 기반으로 제작되었으며, 반응형 디자인과 재사용 가능한 컴포넌트 구조를 갖추고 있습니다.
-<img width="1440" height="753" alt="스크린샷 2025-09-12 오전 9 28 28" src="https://github.com/user-attachments/assets/0483ca77-265b-4ab4-bc68-8421896321c7" />
+ 
+|🚀 배포 주소: [https://sprint-codeit.vercel.app](https://sprint-codeit.vercel.app)|
+|-|
+|<img width="1440" height="753" alt="스크린샷 2025-09-12 오전 9 28 28" src="https://github.com/user-attachments/assets/0483ca77-265b-4ab4-bc68-8421896321c7" />|
 
 ---
 
