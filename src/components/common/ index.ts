@@ -1,3 +1,3 @@
-export * from "./PlusIcon.tsx";
-// export * from "./CheckIcon";
-// export * from "./XIcon";
+export * from "./PlusIcon";
+export * from "./CheckIcon";
+export * from "./XIcon";

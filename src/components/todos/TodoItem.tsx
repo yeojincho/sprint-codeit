@@ -35,7 +35,7 @@ export function TodoItem({id, name, isCompleted, onToggle, variant = "list", onT
       {variant === "detail" ? (
         <input
           value={name}
-          className="ml-3 flex-1 bg-transparent outline-none"
+          className={`ml-3 flex-1 bg-transparent outline-none ${isCompleted ? "underline text-slate-500" : ""}`}
           onChange={(e) => onTextChange?.(e.target.value)}
         />
       ) : (
