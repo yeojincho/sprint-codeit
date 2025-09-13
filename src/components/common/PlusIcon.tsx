@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export type SvgIconProps = React.SVGProps<SVGSVGElement> & {className?: string};
+type SvgIconProps = React.SVGProps<SVGSVGElement> & {className?: string};
 
 export const PlusIcon = ({className, size = "16", strokeWidth = 2, ...props}: SvgIconProps) => (
   <svg
