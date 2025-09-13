@@ -1,4 +1,4 @@
-import {apiClient} from "./apiClient";
+import { apiClient } from "./apiClient";
 
 // 타입 정의
 export type Todo = {
@@ -6,6 +6,7 @@ export type Todo = {
   name: string;
   isCompleted: boolean;
   imageUrl: string;
+  memo?: string;
 };
 
 // ✅ 전체 목록 조회
@@ -18,7 +19,7 @@ export const getTodo = (itemId: number) => apiClient<Todo>(`/items/${itemId}`);
 export const createTodo = (name: string) =>
   apiClient<Todo>(`/items`, {
     method: "POST",
-    body: JSON.stringify({name}),
+    body: JSON.stringify({ name }),
   });
 
 // ✅ 할 일 수정
@@ -35,11 +36,11 @@ export const deleteTodo = (itemId: number) =>
   });
 
 // ✅ 이미지 업로드 API
-export const uploadImage = async (file: File): Promise<{url: string}> => {
+export const uploadImage = async (file: File): Promise<{ url: string }> => {
   const formData = new FormData();
   formData.append("image", file);
 
-  return apiClient<{url: string}>(`/images/upload`, {
+  return apiClient<{ url: string }>(`/images/upload`, {
     method: "POST",
     body: formData,
     headers: {},
