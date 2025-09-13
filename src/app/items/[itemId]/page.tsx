@@ -30,11 +30,12 @@ export default function TodoDetailPage() {
 
     let imageUrlToSave = todo.imageUrl;
 
-      if (image) {
-    const res = await uploadImage(image); // image가 null이 아님을 보장
-    imageUrlToSave = res.url;
-    setImageUrl(res.url);
-  }
+    if (image !== null) {
+      const file: File = image;
+      const res = await uploadImage(file);
+      imageUrlToSave = res.url;
+      setImageUrl(res.url);
+    }
 
     await updateTodo(todo.id, {
       name: todo.name,
