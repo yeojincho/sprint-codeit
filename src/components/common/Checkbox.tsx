@@ -3,7 +3,7 @@ import React from "react";
 
 type CheckboxProps = {
   checked: boolean;
-  onToggle: () => void;
+  onToggle: (e: React.MouseEvent) => void;
 };
 
 export function Checkbox({checked, onToggle}: CheckboxProps) {

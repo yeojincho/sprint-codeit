@@ -27,14 +27,21 @@ export default function TodoDetailPage() {
   // ✅ 수정 완료
   const handleUpdate = async () => {
     if (!todo) return;
-    const res = await uploadImage(image);
-    setImageUrl(res.url);
+
+    let imageUrlToSave = todo.imageUrl;
+
+    if (image !== null) {
+      const file: File = image;
+      const res = await uploadImage(file);
+      imageUrlToSave = res.url;
+      setImageUrl(res.url);
+    }
 
     await updateTodo(todo.id, {
       name: todo.name,
       isCompleted: todo.isCompleted,
       memo,
-      imageUrl: res.url,
+      imageUrl: imageUrlToSave,
     });
     router.push("/");
   };
@@ -70,7 +77,6 @@ export default function TodoDetailPage() {
             w-full lg:w-[385px] overflow-hidden"
           style={{
             backgroundImage: "url('/images/icon-image.png')",
-            backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundSize: "64px",
             backgroundRepeat: "no-repeat",

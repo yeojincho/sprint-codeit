@@ -7,6 +7,11 @@ import {XIcon} from "@/components/common/XIcon";
 
 type ButtonType = "add" | "edit" | "delete";
 type ButtonState = "default" | "active";
+type SvgIconProps = React.SVGProps<SVGSVGElement> & {
+  size?: number | string;
+  strokeWidth?: number;
+};
+type IconComponent = React.ComponentType<SvgIconProps>;
 
 type ButtonProps = {
   type: ButtonType;
@@ -31,6 +36,7 @@ const styles: Record<ButtonType, Record<ButtonState, string>> = {
   },
   delete: {
     default: "bg-rose-500 text-white hover:bg-rose-600",
+    active: "",
   },
 };
 
