@@ -7,6 +7,7 @@ import {XIcon} from "@/components/common/XIcon";
 
 type ButtonType = "add" | "edit" | "delete";
 type ButtonState = "default" | "active";
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 type ButtonProps = {
   type: ButtonType;
