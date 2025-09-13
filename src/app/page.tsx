@@ -32,7 +32,7 @@ export default function HomePage() {
   // ✅ 3. 완료 상태 토글
   const handleToggle = async (todo: Todo) => {
     try {
-      const updated = await updateTodo(todo.id.toString(), {
+      const updated = await updateTodo(todo.id, {
         isCompleted: !todo.isCompleted,
       });
       setTodos((prev) => prev.map((t) => (t.id === todo.id ? {...t, isCompleted: updated.isCompleted} : t)));
