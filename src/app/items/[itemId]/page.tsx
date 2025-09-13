@@ -77,7 +77,6 @@ export default function TodoDetailPage() {
             w-full lg:w-[385px] overflow-hidden"
           style={{
             backgroundImage: "url('/images/icon-image.png')",
-            backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundSize: "64px",
             backgroundRepeat: "no-repeat",
