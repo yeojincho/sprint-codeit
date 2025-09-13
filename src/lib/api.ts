@@ -36,7 +36,9 @@ export const deleteTodo = (itemId: number) =>
   });
 
 // ✅ 이미지 업로드 API
-export const uploadImage = async (file: File): Promise<{ url: string }> => {
+export const uploadImage = async (file: File | null): Promise<{ url: string }> => {
+  if (!file) return { url: "" };
+
   const formData = new FormData();
   formData.append("image", file);
 

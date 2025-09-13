@@ -27,14 +27,20 @@ export default function TodoDetailPage() {
   // ✅ 수정 완료
   const handleUpdate = async () => {
     if (!todo) return;
-    const res = await uploadImage(image);
+
+    let imageUrlToSave = todo.imageUrl;
+
+      if (image) {
+    const res = await uploadImage(image); // image가 null이 아님을 보장
+    imageUrlToSave = res.url;
     setImageUrl(res.url);
+  }
 
     await updateTodo(todo.id, {
       name: todo.name,
       isCompleted: todo.isCompleted,
       memo,
-      imageUrl: res.url,
+      imageUrl: imageUrlToSave,
     });
     router.push("/");
   };
