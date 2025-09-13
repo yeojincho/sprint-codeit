@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #F9FAFB; /* 시안 배경색 */
+}
+
+@theme {
+    /* 기본 컬러 팔레트 */
+  --color-white: #ffffff;
+  --color-black: #0F172A;
+  --color-gray-50: #F8FAFC;
+  --color-gray-100: #F1F5F9;
+  --color-gray-300: #CBD5E1;
+  --color-slate-200: #E2E8F0;
+
+  --color-purple-100: #EDE9FE;
+  --color-purple-200: #DDD6FE;
+  --color-purple-500: #7C3AED;
+
+  --color-green-300: #BEF264;
+  --color-rose-500: #F43F5E;
+
+  /* 체크된 할일 */
+  --color-bg-todo-done: var(--color-purple-200);
+   /* 이미지 추가 영역 */
+  --color-bg-upload: var(--color-gray-300);
+  /* 그림자/텍스트 공통 */
+  --color-shadow-dark: var(--color-black);
+}
+@layer utilities {
+  .text-20-bold {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .text-18-bold {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+  .text-16-bold {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  .text-16-regular {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
